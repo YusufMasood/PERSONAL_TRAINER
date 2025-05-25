@@ -8,11 +8,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 public class Login_Page extends AppCompatActivity {
 
     EditText passwordField, emailFeild ;
@@ -47,11 +44,12 @@ public class Login_Page extends AppCompatActivity {
             }
         });
 
-        Intent jnext =new Intent(Login_Page.this,create_account.class);
+        Intent jnext =new Intent(Login_Page.this, Personal_Info.class);
 
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 startActivity(jnext);
             }
         });
