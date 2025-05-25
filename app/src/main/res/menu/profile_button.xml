@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/grp_profile">
+    <item android:id="@+id/profile"
+        android:icon="@drawable/person"
+        android:title="Profile"/>
+    </group>
+
+
+    <group android:id="@+id/grp_gymBro">
+    <item android:id="@+id/gymbro"
+        android:icon="@drawable/gym_bro"
+        android:title="Our Gym Bros"/>
+    </group>
+
+
+
+
+    <group android:id="@+id/grp_work">
+    <item android:id="@+id/tool"
+        android:icon="@drawable/tools"
+        android:title="Our Tools"/>
+
+    <item android:id="@+id/tips"
+        android:icon="@drawable/tips"
+        android:title="Pro Tips"/>
+
+
+    <item android:id="@+id/workout"
+        android:icon="@drawable/gym_icon"
+        android:title="Workout"/>
+    </group>
+
+
+
+    <group android:id="@+id/grp_nut">
+    <item android:id="@+id/nutrition"
+        android:icon="@drawable/nutrion"
+        android:title="Nutritional Value"/>
+
+    <item android:id="@+id/nutritionlTip"
+        android:icon="@drawable/nutrion"
+        android:title="Nutritional Tips"/>
+    </group>
+
+
+
+
+
+    <group android:id="@+id/grp_setting">
+    <item android:id="@+id/setting"
+        android:icon="@drawable/setting"
+        android:title="Setting"/>
+
+    <item android:id="@+id/logout"
+        android:icon="@drawable/logout"
+        android:title="Log Out"/>
+
+    </group>
+
+    <item android:id="@+id/version"
+        android:icon="@drawable/android"
+        android:title="App Version 1.O.O"
+        android:enabled="false"/>
+
+
+</menu>

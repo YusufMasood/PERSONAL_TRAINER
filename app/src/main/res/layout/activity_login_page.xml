@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <!-- Background Image -->
+
+
+    <!-- Email Field -->
+
+    <!-- Password Field -->
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.8"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logginbg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/emailField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="262dp"
+        android:backgroundTint="#FFFFFF"
+        android:hint="Email / User ID"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/emailField"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="32dp"/>
+
+    <!-- Remember Me Checkbox -->
+    <CheckBox
+        android:id="@+id/rememberCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember me"
+        android:textColor="#CCCCCC"
+        app:layout_constraintTop_toBottomOf="@id/passwordField"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="32dp"/>
+
+    <!-- Forgot Password Text -->
+    <TextView
+        android:id="@+id/forgotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password!!"
+        android:textColor="#AAAAAA"
+        android:textSize="12sp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toTopOf="@id/rememberCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="32dp"/>
+
+    <!-- Login Button -->
+
+    <!-- OR SIGN IN WITH -->
+
+    <!-- Social Login Buttons -->
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/outline_button"
+        android:text="LOGIN"
+        android:textColor="#00FFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rememberCheck" />
+
+    <TextView
+        android:id="@+id/signInWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:text="———— OR SIGN IN WITH ————"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginButton" />
+
+    <!-- Create Account -->
+    <LinearLayout
+        android:id="@+id/socialButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInWith">
+
+        <Button
+            android:id="@+id/Btngog"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/outline_button"
+            android:text="GOOGLE"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/Btnfb"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/outline_button"
+            android:text="FACEBOOK"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/BtnPhone"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:background="@drawable/outline_button"
+            android:text="PHONE"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/createAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Don't have an account? Create Account"
+        android:textColor="#00FFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
