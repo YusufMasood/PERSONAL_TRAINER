@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,44 +11,31 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Create_Account extends AppCompatActivity {
+public class BMR_Calculator extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Button button_calculate;
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_create_account);
+        setContentView(R.layout.activity_bmr_calculator);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-        });
-
-        EditText txtSetUser, txtpass;
-        Button btnNext;
-        CheckBox    termcondition;
-
-        txtSetUser = findViewById(R.id.txtSetUser);
-        txtpass = findViewById(R.id.txtpass);
-        btnNext = findViewById(R.id.btnNext);
-        termcondition = findViewById(R.id.termcondition);
-
-        btnNext.setEnabled(false);
-
-        termcondition.setOnCheckedChangeListener((buttonView, isChecked) -> {
-
-                btnNext.setEnabled(true);
 
         });
 
-        Intent inext = new Intent(Create_Account.this,Login_Page.class);
+        button_calculate  = findViewById(R.id.button_calculate);
 
-        btnNext.setOnClickListener(new View.OnClickListener() {
+        Intent inext = new Intent(BMR_Calculator.this, BMR_Result.class);
+        button_calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(inext);
             }
         });
-
- }
+    }
 }

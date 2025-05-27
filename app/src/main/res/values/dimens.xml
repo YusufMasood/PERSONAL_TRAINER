@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="status_bar_height">24dp</dimen>
+
+    <dimen name="results_title_text_size">28sp</dimen>
+    <dimen name="section_title_text_size">20sp</dimen>
+    <dimen name="main_number_text_size">48sp</dimen>
+    <dimen name="unit_text_size">16sp</dimen>
+    <dimen name="button_text_size">18sp</dimen>
+
+    <dimen name="margin_top_title">32dp</dimen>
+    <dimen name="card_margin_top">48dp</dimen>
+    <dimen name="card_horizontal_margin">24dp</dimen>
+    <dimen name="card_corner_radius">24dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_elevation_none">0dp</dimen>
+    <dimen name="card_overlap_margin">-40dp</dimen>
+    <dimen name="card_inner_padding_top_bmr">48dp</dimen>
+    <dimen name="card_inner_padding_bottom_bmr">64dp</dimen>
+    <dimen name="card_inner_padding_top_tdee">32dp</dimen>
+    <dimen name="card_inner_padding_bottom_tdee">32dp</dimen>
+
+    <dimen name="text_margin_top_number">8dp</dimen>
+    <dimen name="text_margin_top_unit">4dp</dimen>
+
+    <dimen name="button_margin_top">32dp</dimen>
+    <dimen name="button_horizontal_margin">32dp</dimen>
+    <dimen name="button_padding_vertical">16dp</dimen>
+    <dimen name="button_corner_radius">28dp</dimen>
+</resources>

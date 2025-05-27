@@ -45,12 +45,20 @@ public class Login_Page extends AppCompatActivity {
         });
 
         Intent jnext =new Intent(Login_Page.this, Personal_Info.class);
+        Intent knext  = new Intent(Login_Page.this, BMR_Calculator.class);
 
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 startActivity(jnext);
+            }
+        });
+
+        Btngog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(knext);
             }
         });
     }

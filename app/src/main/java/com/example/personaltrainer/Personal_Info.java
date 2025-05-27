@@ -57,7 +57,7 @@ public class Personal_Info extends AppCompatActivity {
                 String age = txtAge.getText().toString().trim();
 
                 if(position != 0 && !name.isEmpty() && !age.isEmpty()){
-                    String selectedGender = genders[position];
+                //    String selectedGender = genders[position];
                     btnNext.setEnabled(true);
 
                     //Toast.makeText(create_account.this,"Selected Gender: " + selectedGender, Toast.LENGTH_SHORT).show();
