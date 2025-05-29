@@ -71,7 +71,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="24,900"
+                android:text="0000"
                 android:textSize="@dimen/main_number_text_size"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
@@ -118,7 +118,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="376,060"
+                android:text="000000"
                 android:textSize="@dimen/main_number_text_size"
                 android:textColor="@android:color/black"
                 android:textStyle="bold"
