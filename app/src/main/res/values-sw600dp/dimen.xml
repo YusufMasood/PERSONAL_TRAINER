@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <dimen name="status_bar_height1">36dp</dimen>
 
     <dimen name="results_title_text_size1">38sp</dimen>
@@ -27,4 +28,6 @@
     <dimen name="button_horizontal_margin1">48dp</dimen>
     <dimen name="button_padding_vertical1">20dp</dimen>
     <dimen name="button_corner_radius1">32dp</dimen>
+
+    <dimen name="profile_image_size">80dp</dimen>
 </resources>

@@ -53,9 +53,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
             android:layout_marginTop="-30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
             android:paddingTop="@dimen/card_inner_padding_top_bmr"
             android:paddingBottom="@dimen/card_inner_padding_bottom_bmr">
 
@@ -69,21 +69,22 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/txtBmrRes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_top_number"
                 android:text="0000"
-                android:textSize="@dimen/main_number_text_size"
                 android:textColor="@android:color/white"
-                android:textStyle="bold"
-                android:layout_marginTop="@dimen/text_margin_top_number"/>
+                android:textSize="@dimen/main_number_text_size"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_top_unit"
                 android:text="calories/day"
-                android:textSize="@dimen/unit_text_size"
                 android:textColor="@android:color/white"
-                android:layout_marginTop="@dimen/text_margin_top_unit"/>
+                android:textSize="@dimen/unit_text_size" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -103,34 +104,37 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:gravity="center_horizontal"
+            android:orientation="vertical"
             android:paddingTop="@dimen/card_inner_padding_top_tdee"
+            android:layout_marginTop="20dp"
             android:paddingBottom="@dimen/card_inner_padding_bottom_tdee">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Your TDEE"
-                android:textSize="@dimen/section_title_text_size"
                 android:textColor="@android:color/black"
+                android:textSize="@dimen/section_title_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTDEE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_top_number"
+                android:text="000000"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/main_number_text_size"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="000000"
-                android:textSize="@dimen/main_number_text_size"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                android:layout_marginTop="@dimen/text_margin_top_number"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_top_unit"
                 android:text="calories/day"
-                android:textSize="@dimen/unit_text_size"
                 android:textColor="@android:color/black"
-                android:layout_marginTop="@dimen/text_margin_top_unit"/>
+                android:textSize="@dimen/unit_text_size" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

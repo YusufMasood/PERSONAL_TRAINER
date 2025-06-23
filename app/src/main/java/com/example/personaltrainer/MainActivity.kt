@@ -1,11 +1,8 @@
 package com.example.personaltrainer
 
 import android.content.Intent
-import android.media.MediaPlayer
-import android.media.MediaPlayer.OnPreparedListener
 import android.net.Uri
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
@@ -26,24 +23,35 @@ class MainActivity : AppCompatActivity() {
         val uri = Uri.parse(path)
 
         vid.setVideoURI(uri)
-        vid.start()
 
-        vid.setOnPreparedListener(OnPreparedListener { mp: MediaPlayer ->
+        vid.setOnPreparedListener { mp ->
             mp.isLooping = true
-        })
 
+            val videoWidth = mp.videoWidth
+            val videoHeight = mp.videoHeight
+            val videoProportion = videoWidth.toFloat() / videoHeight.toFloat()
 
+            // Example: You want video width to match parent (full screen width)
+            val screenWidth = resources.displayMetrics.widthPixels
+            val newHeight = (screenWidth / videoProportion).toInt()
 
-        Btnstrt.setOnClickListener(View.OnClickListener {
-            val inext = Intent(
-                this@MainActivity,
-                Login_Page::class.java
-            )
-            startActivity(inext)
-        })
+            val layoutParams = vid.layoutParams
+            layoutParams.width = screenWidth
+            layoutParams.height = newHeight
+            vid.layoutParams = layoutParams
+
+            vid.start()
+
+        }
+
+        Btnstrt.setOnClickListener {
+            val intent = Intent(this@MainActivity, Login_Page::class.java)
+            startActivity(intent)
+        }
     }
 
-    override fun onPostResume() {
+
+        override fun onPostResume() {
         vid!!.resume()
         super.onPostResume()
     }

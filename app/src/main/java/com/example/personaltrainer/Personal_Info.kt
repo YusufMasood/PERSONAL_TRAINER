@@ -31,7 +31,7 @@ class Personal_Info : AppCompatActivity() {
             insets
         }
 
-        val genders = arrayOf("Gender", "Male", "Female")
+        val genders = arrayOf("Gender","Male", "Female")
 
         txtName = findViewById(R.id.txtName)
         txtAge = findViewById(R.id.txtAge)
