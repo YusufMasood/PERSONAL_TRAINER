@@ -1,8 +1,11 @@
 package com.example.personaltrainer
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
@@ -18,6 +21,7 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlin.rem
 
 
@@ -25,20 +29,12 @@ class First_Page : AppCompatActivity() {
     private lateinit var Btnprofile: ImageButton
     private lateinit var drawer: DrawerLayout
 
-    fun makeStatusBarTranslucent() {
-        // Tell the system that we are handling the system bars (status/navigation)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
 
-        // Make status bar transparent
-        window.statusBarColor = Color.TRANSPARENT
-
-        // Optional: Change status bar icon color (dark or light)
-        val insetsController = WindowInsetsControllerCompat(window, window.decorView)
-        insetsController.isAppearanceLightStatusBars = true  // false if you want white icons
-    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
         super.onCreate(savedInstanceState)
         this.enableEdgeToEdge()
 
@@ -51,14 +47,47 @@ class First_Page : AppCompatActivity() {
             insets
         }
 
+
+
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNaviagtionView)
+        bottomNav.setOnItemSelectedListener { item ->
+
+             when (item.itemId) {
+                R.id.home -> {
+                    true
+                }
+
+                R.id.notification -> {
+                    true
+                }
+
+                R.id.coach -> {
+                    true
+                }
+
+                R.id.tools -> {
+                    val intent = Intent(this, Tools::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.setting -> {
+                    true
+                }
+
+                else -> false
+            }
+        }
+
         Btnprofile = findViewById(R.id.Btnprofile)
         drawer = findViewById(R.id.drawer)
 
 
 
+
         Btnprofile.setOnClickListener(View.OnClickListener {
             drawer.openDrawer(GravityCompat.START)
-            makeStatusBarTranslucent()
+
         })
 
 
@@ -108,6 +137,9 @@ class TextAdapter(private val items: List<String>) : RecyclerView.Adapter<TextAd
 
     override fun getItemCount(): Int = Int.MAX_VALUE
 }
+
+
+
 
 
 

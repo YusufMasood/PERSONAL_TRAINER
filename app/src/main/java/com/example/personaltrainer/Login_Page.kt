@@ -51,13 +51,9 @@ class Login_Page : AppCompatActivity() {
             this@Login_Page,
             Personal_Info::class.java
         )
-        val knext = Intent(
-            this@Login_Page,
-            BMR_Calculator::class.java
-        )
 
         createAccount.setOnClickListener(View.OnClickListener { startActivity(jnext) })
 
-        Btngog.setOnClickListener(View.OnClickListener { startActivity(knext) })
+
     }
 }

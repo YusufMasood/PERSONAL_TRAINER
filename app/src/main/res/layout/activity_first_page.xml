@@ -57,6 +57,31 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
 
+                    <TextView
+                        android:id="@+id/txtCal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:padding="15dp"
+                        android:text="Calorie count"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.022"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="63dp"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/next_arrow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.292"
+                        app:layout_constraintStart_toStartOf="@id/txtCal"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <ProgressBar
                         android:id="@+id/caloriesTrack"
                         style="?android:attr/progressBarStyleHorizontal"
@@ -81,6 +106,31 @@
                     android:background="@drawable/rectangular_soft_boarder"
                     android:gravity="bottom">
 
+                    <TextView
+                        android:id="@+id/txtWater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:padding="15dp"
+                        android:text="Track water"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.022"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="63dp"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:src="@drawable/next_arrow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.272"
+                        app:layout_constraintStart_toStartOf="@id/txtWater"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <ProgressBar
                         android:id="@+id/waterTrack"
                         style="?android:attr/progressBarStyleHorizontal"
@@ -94,12 +144,13 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="30dp"
                         android:max="5000"
-                        android:progress="2000"/>
+                        android:progress="3000"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNaviagtionView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
