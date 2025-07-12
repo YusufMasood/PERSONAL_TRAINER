@@ -12,6 +12,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -28,6 +29,8 @@ import kotlin.rem
 class First_Page : AppCompatActivity() {
     private lateinit var Btnprofile: ImageButton
     private lateinit var drawer: DrawerLayout
+
+    private lateinit var btnFoodLog: ConstraintLayout
 
 
 
@@ -50,6 +53,7 @@ class First_Page : AppCompatActivity() {
 
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNaviagtionView)
+        val btnFoodLog = findViewById<ConstraintLayout>(R.id.btnFoodLog)
         bottomNav.setOnItemSelectedListener { item ->
 
              when (item.itemId) {
@@ -78,6 +82,14 @@ class First_Page : AppCompatActivity() {
                 else -> false
             }
         }
+
+
+        btnFoodLog.setOnClickListener(View.OnClickListener {
+
+            val iNext = Intent(this, Food_log::class.java)
+            startActivity(iNext)
+
+        })
 
         Btnprofile = findViewById(R.id.Btnprofile)
         drawer = findViewById(R.id.drawer)

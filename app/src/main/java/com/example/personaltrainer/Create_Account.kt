@@ -18,7 +18,7 @@ class Create_Account : AppCompatActivity() {
         this.enableEdgeToEdge()
         setContentView(R.layout.activity_create_account)
         ViewCompat.setOnApplyWindowInsetsListener(
-            findViewById(R.id.main)
+            findViewById(R.id.calprogress)
         ) { v: View, insets: WindowInsetsCompat ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

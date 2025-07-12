@@ -49,6 +49,7 @@
                     android:overScrollMode="never"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btnFoodLog"
                     android:layout_width="385dp"
                     android:layout_height="140dp"
                     android:layout_marginBottom="20dp"

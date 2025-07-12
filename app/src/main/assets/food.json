@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Banana",
+    "calories": 89,
+    "protein": 1.1,
+    "carbs": 22.8,
+    "fat": 0.3,
+    "category": "Fruit"
+  },
+  {
+    "name": "Boiled Egg",
+    "calories": 155,
+    "protein": 13.0,
+    "carbs": 1.1,
+    "fat": 11.0,
+    "category": "Protein"
+  },
+  {
+    "name": "Chapati",
+    "calories": 104,
+    "protein": 3.1,
+    "carbs": 15.7,
+    "fat": 3.2,
+    "category": "Grain"
+  }
+]

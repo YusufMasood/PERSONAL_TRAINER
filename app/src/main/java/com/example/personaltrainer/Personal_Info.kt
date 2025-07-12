@@ -24,7 +24,7 @@ class Personal_Info : AppCompatActivity() {
         this.enableEdgeToEdge()
         setContentView(R.layout.activity_personal_info)
         ViewCompat.setOnApplyWindowInsetsListener(
-            findViewById(R.id.main)
+            findViewById(R.id.calprogress)
         ) { v: View, insets: WindowInsetsCompat ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
