@@ -40,10 +40,23 @@
             android:visibility="visible" />
     </LinearLayout>
 
+    <ScrollView
+        android:id="@+id/scrollMeals"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
 
 
     <!-- Hidden section (starts as gone) -->
-    <LinearLayout
+      <LinearLayout
         android:id="@+id/progressContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -112,10 +125,10 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-    </LinearLayout>
+      </LinearLayout>
 
     <!-- Toggle Button that appears BELOW everything -->
-    <ImageButton
+      <ImageButton
         android:id="@+id/toggleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -123,50 +136,53 @@
         android:layout_gravity="center"
         android:layout_marginTop="12dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:background="@drawable/rectangular_soft_boarder"
-        android:gravity="center_vertical"
-        android:padding="12dp"
-        android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/rectangular_soft_boarder"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Breakfast"
-            android:textStyle="bold"
-            android:textSize="15sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Breakfast"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/transparent_button"
-            android:src="@drawable/alarm"/>
+                <ImageButton
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/transparent_button"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/note"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/transparent_button"
+                    android:src="@drawable/alarm" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/transparent_button"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/add"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:padding="10dp"
+                    android:background="@drawable/transparent_button"
+                    android:src="@drawable/note" />
 
-    </LinearLayout>
+                <ImageButton
+                    android:id="@+id/addBreakfast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/transparent_button"
+                    android:src="@drawable/add" />
 
-    <LinearLayout
+            </LinearLayout>
+
+            <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -180,7 +196,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lunch"
-            android:textSize="15sp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <View
@@ -198,19 +214,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/transparent_button"
+            android:padding="10dp"
             android:layout_marginStart="8dp"
             android:src="@drawable/note"/>
 
         <ImageButton
+            android:id="@+id/addLunch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/transparent_button"
             android:layout_marginStart="8dp"
             android:src="@drawable/add"/>
 
-    </LinearLayout>
+      </LinearLayout>
 
-    <LinearLayout
+      <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -225,7 +243,7 @@
             android:layout_height="wrap_content"
             android:text="Snacks"
             android:textStyle="bold"
-            android:textSize="15sp"/>
+            android:textSize="25sp"/>
 
         <View
             android:layout_width="0dp"
@@ -243,18 +261,20 @@
             android:layout_height="wrap_content"
             android:background="@drawable/transparent_button"
             android:layout_marginStart="8dp"
+            android:padding="10dp"
             android:src="@drawable/note"/>
 
         <ImageButton
+            android:id="@+id/addSnacks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/transparent_button"
             android:layout_marginStart="8dp"
             android:src="@drawable/add"/>
 
-    </LinearLayout>
+      </LinearLayout>
 
-    <LinearLayout
+       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -269,7 +289,7 @@
             android:layout_height="wrap_content"
             android:text="Dinner"
             android:textStyle="bold"
-            android:textSize="15sp"/>
+            android:textSize="25sp"/>
 
         <View
             android:layout_width="0dp"
@@ -287,15 +307,21 @@
             android:layout_height="wrap_content"
             android:background="@drawable/transparent_button"
             android:layout_marginStart="8dp"
+            android:padding="10dp"
             android:src="@drawable/note"/>
 
         <ImageButton
+            android:id="@+id/addDinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/transparent_button"
             android:layout_marginStart="8dp"
             android:src="@drawable/add"/>
 
-    </LinearLayout>
+         </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

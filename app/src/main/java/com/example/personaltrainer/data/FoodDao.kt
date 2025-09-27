@@ -11,6 +11,9 @@ interface FoodDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(foods: List<FoodItem>)
 
+    @Query("DELETE FROM Foods")
+    suspend fun clearAll()
+
     @Query("SELECT * FROM foods WHERE name LIKE '%' || :query || '%'")
     suspend fun searchFood(query: String): List<FoodItem>
 }

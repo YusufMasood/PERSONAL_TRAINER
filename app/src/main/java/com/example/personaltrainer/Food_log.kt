@@ -1,5 +1,6 @@
 package com.example.personaltrainer
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -8,6 +9,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageButton
 import android.widget.LinearLayout
+import android.widget.ScrollView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -32,6 +34,16 @@ class Food_log : AppCompatActivity() {
         // ✅ THIS is where toggle logic should go
         val progressContainer = findViewById<LinearLayout>(R.id.progressContainer)
         val toggleButton = findViewById<ImageButton>(R.id.toggleButton)
+        val scrollMeals = findViewById<ScrollView>(R.id.scrollMeals)
+        val addBreakfast = findViewById<ImageButton>(R.id.addBreakfast)
+        val addLunch = findViewById<ImageButton>(R.id.addLunch)
+        val addSnacks = findViewById<ImageButton>(R.id.addSnacks)
+        val addDinner = findViewById<ImageButton>(R.id.addDinner)
+
+        val slideIn = AnimationUtils.loadAnimation(this, R.anim.slide_up_progress)
+        scrollMeals.startAnimation(slideIn)
+
+        val inext = Intent(this, Food_log::class.java)
 
         toggleButton.setOnClickListener {
 
@@ -58,6 +70,19 @@ class Food_log : AppCompatActivity() {
                 // Optional: reset arrow rotation
                 toggleButton.rotation = 0f
             }
+        }
+
+        addBreakfast.setOnClickListener {
+            startActivity(inext)
+        }
+        addLunch.setOnClickListener {
+            startActivity(inext)
+        }
+        addSnacks.setOnClickListener {
+            startActivity(inext)
+        }
+        addDinner.setOnClickListener {
+            startActivity(inext)
         }
     }
 }
