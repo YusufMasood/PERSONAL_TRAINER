@@ -18,7 +18,7 @@ The **Personal Trainer App** is an Android application designed to help users ac
 
 - Android Studio
 - Kotlin / Java
-- XML for UI Design
+- Jetpack compose
 - Lottie for animations
 - Git & GitHub for version control
 
