@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "234424317073",
+    "project_id": "personal-trainer-780e6",
+    "storage_bucket": "personal-trainer-780e6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234424317073:android:a3e784e7b9b610328c7b30",
+        "android_client_info": {
+          "package_name": "com.example.personaltrainer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW-qesUgi87CgYGLXFH0GM1aL3-YOdlQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

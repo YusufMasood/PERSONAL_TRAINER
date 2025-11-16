@@ -2,58 +2,81 @@ package com.example.personaltrainer
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.FirebaseException
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.PhoneAuthCredential
+import com.google.firebase.auth.PhoneAuthOptions
+import com.google.firebase.auth.PhoneAuthProvider
+import java.util.concurrent.TimeUnit
 
 class Login_Page : AppCompatActivity() {
-    private lateinit var passwordField: EditText
-    private lateinit var emailFeild: EditText
-    private lateinit var loginButton: Button
-    private lateinit var Btngog: Button
-    private lateinit var Btnfb: Button
-    private lateinit var BtnPhone: Button
+
+    private lateinit var Phone: EditText
+    private lateinit var SendOtp: Button
     private lateinit var remembercheck: CheckBox
-    private lateinit var forgetpass: TextView
-    private lateinit var signInWith: TextView
-    private lateinit var createAccount: TextView
+
+    private lateinit var auth: FirebaseAuth
+    private lateinit var mCallbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_page)
 
-        emailFeild = findViewById(R.id.emailField)
-        passwordField = findViewById(R.id.passwordField)
-        loginButton = findViewById(R.id.loginButton)
-        Btngog = findViewById(R.id.Btngog)
-        Btnfb = findViewById(R.id.Btnfb)
-        BtnPhone = findViewById(R.id.BtnPhone)
+        // Firebase
+        auth = FirebaseAuth.getInstance()
+
+        // Views
+        Phone = findViewById(R.id.Phone)
+        SendOtp = findViewById(R.id.SendOtp)
         remembercheck = findViewById(R.id.rememberCheck)
-        forgetpass = findViewById(R.id.forgotPass)
-        createAccount = findViewById(R.id.createAccount)
+
+        // OTP Callbacks
+        mCallbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+            override fun onVerificationCompleted(credential: PhoneAuthCredential) {
+                // Auto-verification
+            }
+
+            override fun onVerificationFailed(e: FirebaseException) {
+                Toast.makeText(this@Login_Page, "Verification Failed: ${e.message}", Toast.LENGTH_LONG).show()
+            }
+
+            override fun onCodeSent(
+                verificationId: String,
+                token: PhoneAuthProvider.ForceResendingToken
+            ) {
+                super.onCodeSent(verificationId, token)
+
+                val intent = Intent(this@Login_Page, OtpActivity::class.java)
+                intent.putExtra("PHONE", Phone.text.toString().trim())
+                intent.putExtra("verificationId", verificationId)
+                startActivity(intent)
+            }
+        }
 
 
-        val inext = Intent(
-            this@Login_Page,
-            First_Page::class.java
-        )
+        // Send OTP Logic
+        SendOtp.setOnClickListener {
 
-        loginButton.setOnClickListener(View.OnClickListener {
-            emailFeild.setText("")
-            passwordField.setText("")
-            startActivity(inext)
-        })
+            val phone = Phone.text.toString().trim()
 
-        val jnext = Intent(
-            this@Login_Page,
-            Personal_Info::class.java
-        )
+            if (phone.isEmpty() || phone.length != 10) {
+                Toast.makeText(this, "Enter valid phone number", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
-        createAccount.setOnClickListener(View.OnClickListener { startActivity(jnext) })
+            val numberWithCode = "+91$phone"
 
+            val options = PhoneAuthOptions.newBuilder(auth)
+                .setPhoneNumber(numberWithCode)
+                .setTimeout(60L, TimeUnit.SECONDS)
+                .setActivity(this)
+                .setCallbacks(mCallbacks)
+                .build()
 
+            PhoneAuthProvider.verifyPhoneNumber(options)
+        }
     }
 }
