@@ -34,12 +34,7 @@
         <activity
             android:name=".BMR_Result"
             android:exported="false" />
-        <activity
-            android:name=".Create_Account"
-            android:exported="false" />
-        <activity
-            android:name=".Personal_Info"
-            android:exported="false" />
+
         <activity
             android:name=".First_Page"
             android:exported="false" />
