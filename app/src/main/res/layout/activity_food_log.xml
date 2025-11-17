@@ -28,7 +28,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="0 of 2000 Kcal"
+            android:text="0 of 5000 Kcal"
             android:layout_marginTop="4dp"/>
 
         <ProgressBar
@@ -128,13 +128,14 @@
       </LinearLayout>
 
     <!-- Toggle Button that appears BELOW everything -->
-      <ImageButton
-        android:id="@+id/toggleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/drop_down_arrow"
-        android:layout_gravity="center"
-        android:layout_marginTop="12dp" />
+
+            <ImageButton
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/drop_down_arrow" />
 
             <LinearLayout
                 android:layout_width="match_parent"
