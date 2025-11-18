@@ -12,9 +12,9 @@
         android:title="Notification"/>
 
     <item
-        android:id="@+id/coach"
+        android:id="@+id/scan"
         android:icon="@drawable/gym_bro"
-        android:title="Get a Coach"/>
+        android:title="Scan"/>
 
     <item
         android:id="@+id/tools"
