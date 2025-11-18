@@ -18,12 +18,12 @@
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/round_edittext"
-        android:backgroundTint="#EBE9E9"
+        android:backgroundTint="#E2E1E1"
         android:hint="Mobile number"
         android:inputType="number"
         android:textAlignment="center"
         android:textColor="#0E0E0E"
-        android:textColorHint="#9B9999"
+        android:textColorHint="#ACA4A4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Remember me"
-        android:textColor="#676464"
+        android:textColor="#666464"
         app:layout_constraintTop_toBottomOf="@id/Phone"
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,11 +105,11 @@
             android:textSize="10sp" />
 
         <Button
-            android:id="@+id/BtnPhone"
+            android:id="@+id/BtnTwitter"
             android:layout_width="110dp"
             android:layout_height="50dp"
             android:background="@drawable/outline_button"
-            android:text="PHONE"
+            android:text="Twitter"
             android:textColor="#0E0E0E"
             android:textSize="10sp" />
     </LinearLayout>
@@ -124,5 +124,17 @@
         app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSkip"
+        android:layout_width="97dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:text="skip"
+        app:layout_constraintBottom_toTopOf="@+id/signInWith"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SendOtp"
+        app:layout_constraintVertical_bias="0.369" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

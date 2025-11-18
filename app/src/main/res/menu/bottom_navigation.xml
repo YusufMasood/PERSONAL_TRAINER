@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/home"
@@ -13,7 +14,8 @@
 
     <item
         android:id="@+id/scan"
-        android:icon="@drawable/gym_bro"
+        android:icon="@drawable/scan"
+        app:itemIconSize="40dp"
         android:title="Scan"/>
 
     <item

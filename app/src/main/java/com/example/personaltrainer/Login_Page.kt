@@ -11,12 +11,15 @@ import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import java.util.concurrent.TimeUnit
 
+
+
 class Login_Page : AppCompatActivity() {
 
     private lateinit var Phone: EditText
     private lateinit var SendOtp: Button
     private lateinit var remembercheck: CheckBox
 
+    private lateinit var btnSkip: Button
     private lateinit var auth: FirebaseAuth
     private lateinit var mCallbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
 
@@ -31,6 +34,7 @@ class Login_Page : AppCompatActivity() {
         Phone = findViewById(R.id.Phone)
         SendOtp = findViewById(R.id.SendOtp)
         remembercheck = findViewById(R.id.rememberCheck)
+        btnSkip = findViewById(R.id.btnSkip)
 
         // OTP Callbacks
         mCallbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
@@ -54,6 +58,11 @@ class Login_Page : AppCompatActivity() {
                 intent.putExtra("verificationId", verificationId)
                 startActivity(intent)
             }
+        }
+
+        btnSkip.setOnClickListener {
+            val intent  = Intent(this, First_Page::class.java)
+            startActivity(intent)
         }
 
 
