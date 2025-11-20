@@ -73,6 +73,95 @@ class BMI {
 
             )
 
+
+            OutlinedTextField(
+                value = weight,
+                onValueChange = {weight = it},
+
+                label = {Text("Height in Feet")},
+                singleLine = true,
+                textStyle = TextStyle(
+                    textAlign = TextAlign.Center,
+                    fontSize = 18.sp
+                ),
+
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+
+                colors = TextFieldDefaults.outlinedTextFieldColors(
+                    focusedBorderColor = Color.Cyan,
+                    unfocusedBorderColor = Color.Gray,
+                    focusedLabelColor = Color.Cyan,
+                    unfocusedLabelColor = Color.LightGray,
+                    cursorColor = Color.Cyan,
+                    focusedTextColor = Color.White,
+                    unfocusedTextColor = Color.White,
+                    focusedLeadingIconColor = Color.Cyan,
+                    unfocusedTrailingIconColor = Color.Cyan
+
+                )
+
+
+            )
+
+            OutlinedTextField(
+                value = weight,
+                onValueChange = {weight = it},
+
+                label = {Text("Height in Inch")},
+                singleLine = true,
+                textStyle = TextStyle(
+                    textAlign = TextAlign.Center,
+                    fontSize = 18.sp
+                ),
+
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+
+                colors = TextFieldDefaults.outlinedTextFieldColors(
+                    focusedBorderColor = Color.Cyan,
+                    unfocusedBorderColor = Color.Gray,
+                    focusedLabelColor = Color.Cyan,
+                    unfocusedLabelColor = Color.LightGray,
+                    cursorColor = Color.Cyan,
+                    focusedTextColor = Color.White,
+                    unfocusedTextColor = Color.White,
+                    focusedLeadingIconColor = Color.Cyan,
+                    unfocusedTrailingIconColor = Color.Cyan
+
+                )
+
+
+            )
+
+
+            OutlinedTextField(
+                value = weight,
+                onValueChange = {weight = it},
+
+                label = {Text("Age")},
+                singleLine = true,
+                textStyle = TextStyle(
+                    textAlign = TextAlign.Center,
+                    fontSize = 18.sp
+                ),
+
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+
+                colors = TextFieldDefaults.outlinedTextFieldColors(
+                    focusedBorderColor = Color.Cyan,
+                    unfocusedBorderColor = Color.Gray,
+                    focusedLabelColor = Color.Cyan,
+                    unfocusedLabelColor = Color.LightGray,
+                    cursorColor = Color.Cyan,
+                    focusedTextColor = Color.Black,
+                    unfocusedTextColor = Color.White,
+                    focusedLeadingIconColor = Color.Cyan,
+                    unfocusedTrailingIconColor = Color.Cyan
+
+                )
+
+
+            )
+
             Button(onClick = {}) {Text("Click me") }
         }
 
