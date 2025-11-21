@@ -30,7 +30,7 @@ class OtpActivity : ComponentActivity() {
 
                     auth.signInWithCredential(credential).addOnCompleteListener { task ->
                         if (task.isSuccessful) {
-                            Toast.makeText(this, "OTP Verified!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "OTP Verified!!", Toast.LENGTH_SHORT).show()
 
                             // TODO → Navigate to Home screen
                              startActivity(Intent(this, First_Page::class.java))
