@@ -15,6 +15,7 @@ class Tools : AppCompatActivity() {
         setContentView(R.layout.activity_tools)
 
         val bmrTool = findViewById<LinearLayout>(R.id.bmrTool)
+        val bmiTool = findViewById<LinearLayout>(R.id.bmiTool)
 
         val inext = Intent(this, BMR_Calculator::class.java)
 

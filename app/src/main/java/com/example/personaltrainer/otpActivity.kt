@@ -43,7 +43,7 @@ class OtpActivity : ComponentActivity() {
                 },
 
                 onResendOtp = {
-                    Toast.makeText(this, "Resend OTP logic goes here", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Resend OTP ", Toast.LENGTH_SHORT).show()
                 }
             )
         }

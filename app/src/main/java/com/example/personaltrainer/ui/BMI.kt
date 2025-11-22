@@ -165,7 +165,7 @@ class BMI {
 
             )
 
-            Button(onClick = { Toast.makeText(context,"Your BMI IS ",Toast.LENGTH_SHORT).show()}) {Text("BMI") }
+            Button(onClick = { Toast.makeText(context,"Your BMI IS " +  Age,Toast.LENGTH_SHORT).show()}) {Text("BMI") }
         }
 
     }
