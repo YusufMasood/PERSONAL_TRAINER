@@ -32,24 +32,27 @@
 
         <activity android:name=".OtpActivity" />
 
-        <activity
-            android:name=".Tools"
-            android:exported="false" />
-        <activity
-            android:name=".BMR_Calculator"
-            android:exported="false" />
-        <activity
-            android:name=".BMR_Result"
+        <activity android:name=".BmiActivity"
             android:exported="false" />
 
         <activity
-            android:name=".First_Page"
+            android:name=".ui.Tools"
             android:exported="false" />
         <activity
-            android:name=".Login_Page"
+            android:name=".ui.BMR_Calculator"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.BMR_Result"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.First_Page"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Login_Page"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

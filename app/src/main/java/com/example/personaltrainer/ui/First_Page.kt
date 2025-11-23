@@ -1,4 +1,4 @@
-package com.example.personaltrainer
+package com.example.personaltrainer.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -20,6 +20,9 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.example.personaltrainer.Food_log
+import com.example.personaltrainer.R
+import com.example.personaltrainer.ui.Tools
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.personaltrainer.utils.AppPermissions
 

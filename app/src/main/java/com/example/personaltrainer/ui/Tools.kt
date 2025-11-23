@@ -1,12 +1,12 @@
-package com.example.personaltrainer
+package com.example.personaltrainer.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.personaltrainer.BmiActivity
+import com.example.personaltrainer.R
 
 class Tools : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,9 +18,14 @@ class Tools : AppCompatActivity() {
         val bmiTool = findViewById<LinearLayout>(R.id.bmiTool)
 
         val inext = Intent(this, BMR_Calculator::class.java)
+        val jnext = Intent(this, BmiActivity::class.java)
 
         bmrTool.setOnClickListener {
             startActivity(inext)
+        }
+
+        bmiTool.setOnClickListener {
+            startActivity(jnext)
         }
 
     }

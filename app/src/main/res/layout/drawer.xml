@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#100F0F"
-    tools:context=".First_Page">
+    tools:context=".ui.First_Page">
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
