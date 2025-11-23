@@ -2,7 +2,9 @@ package com.example.personaltrainer.ui
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
@@ -46,6 +48,8 @@ class BMI {
                 .padding(20.dp),
                  horizontalAlignment = Alignment.CenterHorizontally
         ){
+
+            Spacer(modifier = Modifier.height(80.dp))
 
             OutlinedTextField(
                 value = weight,
