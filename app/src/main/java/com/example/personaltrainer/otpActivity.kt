@@ -38,13 +38,13 @@ class OtpActivity : ComponentActivity() {
                             // finish()
 
                         } else {
-                            Toast.makeText(this, "Invalid OTP!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "Invalid OTP!!", Toast.LENGTH_SHORT).show()
                         }
                     }
                 },
 
                 onResendOtp = {
-                    Toast.makeText(this, "Resend OTP ", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Resend OTP Again", Toast.LENGTH_SHORT).show()
                 }
             )
         }

@@ -55,7 +55,7 @@ class BMI {
                 value = weight,
                 onValueChange = {weight = it},
 
-                label = {Text("Weight")},
+                label = {Text("Weight in KG")},
                 singleLine = true,
                 textStyle = TextStyle(
                     textAlign = TextAlign.Center,
@@ -169,7 +169,7 @@ class BMI {
 
             )
 
-            Button(onClick = { Toast.makeText(context,"Your BMI IS " +  Age,Toast.LENGTH_SHORT).show()}) {Text("BMI") }
+            Button(onClick = { Toast.makeText(context,"Your BMI IS ",Toast.LENGTH_SHORT).show()}) {Text("BMI") }
         }
 
     }
