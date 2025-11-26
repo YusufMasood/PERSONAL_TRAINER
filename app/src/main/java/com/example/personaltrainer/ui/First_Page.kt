@@ -41,7 +41,7 @@ class First_Page : AppCompatActivity() {
             if (granted) {
                 openCamera()
             } else {
-                Toast.makeText(this, "Camera permission required", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Camera permission required!!", Toast.LENGTH_SHORT).show()
             }
         }
 
