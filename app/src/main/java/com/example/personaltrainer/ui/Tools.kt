@@ -16,6 +16,7 @@ class Tools : AppCompatActivity() {
 
         val bmrTool = findViewById<LinearLayout>(R.id.bmrTool)
         val bmiTool = findViewById<LinearLayout>(R.id.bmiTool)
+        var fatTools = findViewById<LinearLayout>(R.id.fatTool)
 
         val inext = Intent(this, BMR_Calculator::class.java)
         val jnext = Intent(this, BmiActivity::class.java)
@@ -26,6 +27,10 @@ class Tools : AppCompatActivity() {
 
         bmiTool.setOnClickListener {
             startActivity(jnext)
+        }
+
+        fatTools.setOnClickListener {
+
         }
 
     }
