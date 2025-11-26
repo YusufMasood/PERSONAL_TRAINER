@@ -129,7 +129,8 @@ class First_Page : AppCompatActivity() {
             "Roni Colmenares",
             "Jay Cutler",
             "Chris Bumstead",
-            "Kaigreen"
+            "Kaigreen",
+            "Hadi Choopan"
         )
 
 
