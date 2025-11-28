@@ -1,7 +1,11 @@
 package com.example.personaltrainer.ui
 
+import android.R.attr.onClick
+import android.text.Layout
 import android.widget.Toast
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -10,6 +14,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
@@ -41,6 +46,9 @@ class BMI {
         var HeightInch by remember {mutableStateOf("")}
         var Age by remember {mutableStateOf("")}
         val context = LocalContext.current
+
+        val genderOption = listOf("Male", "Female")
+        var genderSelected by remember { mutableStateOf(genderOption[0]) }
 
         Column(
             modifier = Modifier
@@ -168,6 +176,22 @@ class BMI {
 
 
             )
+
+
+            Column(modifier = Modifier
+                .align(Alignment.Start)
+                .padding(22.dp)
+                , horizontalAlignment = Alignment.Start) {
+                genderOption.forEach { genderOption ->
+                    Row( verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(
+                            selected =genderSelected == genderOption,
+                            onClick = { genderSelected = genderOption}
+                        )
+                        Text(text = genderOption)
+                    }
+                }
+            }
 
             Button(onClick = { Toast.makeText(context,"Your BMI IS ",Toast.LENGTH_SHORT).show()}) {Text("BMI") }
         }
