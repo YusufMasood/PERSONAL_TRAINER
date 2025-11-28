@@ -87,7 +87,7 @@ fun OtpScreen(
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
-                text = "Enter the OTP sent to +91$phone",
+                text = "Enter the OTP sent to +91 $phone",
                 fontSize = 18.sp,
                 color = Color.Gray
             )
@@ -195,7 +195,7 @@ fun OtpScreen(
                 Text(
                     text = "Verify OTP",
                     color = Color.White,
-                    fontSize = 18.sp,
+                    fontSize = 19.sp,
                     fontWeight = FontWeight.Bold
                 )
             }

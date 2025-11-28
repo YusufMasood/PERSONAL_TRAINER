@@ -10,7 +10,8 @@ class MealList {
 
     @Composable
     fun meals(){
-        Box(modifier = Modifier.fillMaxSize()){
+        Box(modifier = Modifier
+            .fillMaxSize()){
             Column() { }
         }
     }
