@@ -1,9 +1,7 @@
 package com.example.personaltrainer.ui
 
-import android.R.attr.onClick
-import android.text.Layout
+
 import android.widget.Toast
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -192,6 +190,12 @@ class BMI {
                     }
                 }
             }
+
+
+            val feet = HeightFeet.toIntOrNull() ?: 0
+            val inch = HeightInch.toIntOrNull() ?: 0
+
+            var totalHight = (feet * 12) + inch
 
             Button(onClick = { Toast.makeText(context,"Your BMI IS ",Toast.LENGTH_SHORT).show()}) {Text("BMI") }
         }
