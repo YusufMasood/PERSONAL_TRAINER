@@ -201,7 +201,7 @@ class BMI {
 
             val BMI = (weight/(hightInMeter * hightInMeter))
 
-            Button(onClick = { Toast.makeText(context,"Your BMI IS :-$BMI",Toast.LENGTH_SHORT).show()}) {Text("BMI") }
+            Button(onClick = { Toast.makeText(context,"Your BMI IS :- $BMI",Toast.LENGTH_SHORT).show()}) {Text("BMI") }
         }
 
     }
