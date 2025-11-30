@@ -199,9 +199,9 @@ class BMI {
             var totalHight = (feet * 12) + inch
             val hightInMeter = (39.37 * totalHight)
 
-            val maleBmi = (weight/(hightInMeter * hightInMeter))
+            val BMI = (weight/(hightInMeter * hightInMeter))
 
-            Button(onClick = { Toast.makeText(context,"Your BMI IS $maleBmi",Toast.LENGTH_SHORT).show()}) {Text("BMI") }
+            Button(onClick = { Toast.makeText(context,"Your BMI IS :-$BMI",Toast.LENGTH_SHORT).show()}) {Text("BMI") }
         }
 
     }
